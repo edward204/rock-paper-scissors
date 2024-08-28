@@ -64,8 +64,16 @@ function playGame() {
         // Call the function to play a round
         playRound (humanSelection, computerSelection);
     }
-    console.log(computerScore);
-    console.log(humanScore);
+    if (humanScore > computerScore) {
+        console.log("Congratulations! you won overall");
+    } else if (humanScore == computerScore) {
+        console.log("Tie! that was a close game");
+    } else {
+        console.log("Unlucky you lost, better luck next time");
+    }
+
+    console.log("Your Score: " + humanScore);
+    console.log("Computer Score: " + computerScore);
 }
 
 playGame();
